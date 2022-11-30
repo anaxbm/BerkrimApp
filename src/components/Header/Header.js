@@ -3,7 +3,8 @@ const Header = () => {
   return (
     <nav className={styles.navbar}>
       <img
-        src="public\images\ice cream - Made with PosterMyWall.png"
+        id={styles.logo}
+        src="/images/icecreamlogo.png"
         alt="berkrim-logo"
       ></img>
     </nav>

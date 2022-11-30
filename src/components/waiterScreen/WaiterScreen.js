@@ -5,7 +5,6 @@ const WaiterScreen = () => {
   return (
     <main className="main-waiter-section">
       <Menu />
-
       <Order />
     </main>
   );
