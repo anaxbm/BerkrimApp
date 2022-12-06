@@ -7,21 +7,23 @@ import Menus from '../../mockData';
 const Menu = () => {
   const { snacks, iceCreamMenu } = Menus;
   const [Menu, setMenu] = useState(iceCreamMenu);
-  const switchMenu = () => {
-    console.log(Menu);
-    if (Menu === snacks) {
-      console.log('cambiando a ice cream');
-      setMenu(iceCreamMenu);
-    } else if (Menu === iceCreamMenu) {
-      console.log('cambiando snacks');
+
+  const switchMenuIceCream = () => {
+    if (Menu === iceCreamMenu) {
       setMenu(snacks);
+    }
+  };
+
+  const switchMenuSnacks = () => {
+    if (Menu === snacks) {
+      setMenu(iceCreamMenu);
     }
   };
   return (
     <section className={styles.menusection}>
       <div className={styles.buttonsdiv}>
-        <IceCreamBtn switchMenu={switchMenu} />
-        <SnackButton switchMenu={switchMenu} />
+        <IceCreamBtn switchMenuSnacks={switchMenuSnacks} />
+        <SnackButton switchMenuIceCream={switchMenuIceCream} />
       </div>
       <MenuProducts Menu={Menu} />
     </section>
