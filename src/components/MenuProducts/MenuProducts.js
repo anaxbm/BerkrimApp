@@ -5,7 +5,15 @@ import Menu from '../Menu/Menu';
 
 const MenuProducts = (props) => {
   const menu = props.Menu.map((product) => {
-    return <Product key={uuid()} name={product.name} price={product.price} />;
+    return (
+      <Product
+        setOrders={props.setOrders}
+        orders={props.orders}
+        key={uuid()}
+        name={product.name}
+        price={product.price}
+      />
+    );
   });
   return <div className={styles.menuProducts}>{menu}</div>;
 };
