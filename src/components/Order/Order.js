@@ -1,10 +1,11 @@
 import styles from './orderstyle.module.sass';
 import SendButton from '../SendButton/SendButton';
+import { v4 as uuid } from 'uuid';
 
 const Order = (props) => {
   const orders = props.orders.map((order) => {
     return (
-      <div className={styles.orderItemsContainer}>
+      <div className={styles.orderItemsContainer} key={uuid()}>
         <h4>{order.quantity}</h4>
         <h4>{order.name}</h4>
         <h4>{order.total}</h4>

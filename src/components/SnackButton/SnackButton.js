@@ -1,7 +1,7 @@
 import styles from '../IceCreamButton/iceCreambtn.module.sass';
 const SnackButton = (props) => {
   return (
-    <button onClick={props.switchMenuIceCream} className={styles.menuButton}>
+    <button onClick={props.switchMenusSnacks} className={styles.menuButton}>
       Snacks
     </button>
   );

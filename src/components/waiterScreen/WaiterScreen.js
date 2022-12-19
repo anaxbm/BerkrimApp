@@ -1,7 +1,7 @@
 import styles from './waiterscreenstyle.module.sass';
-import Menu from '../Menu/Menu';
 import Order from '../Order/Order';
 import { useState } from 'react';
+import MenuProducts from '../MenuProducts/MenuProducts';
 
 const WaiterScreen = () => {
   const [orders, setOrders] = useState([
@@ -16,10 +16,10 @@ const WaiterScreen = () => {
       total: 195,
     },
   ]);
-  console.log(orders);
+
   return (
     <main className={styles.mainWaiterSection}>
-      <Menu setOrders={setOrders} orders={orders} />
+      <MenuProducts setOrders={setOrders} orders={orders} />
       <Order orders={orders} />
     </main>
   );
